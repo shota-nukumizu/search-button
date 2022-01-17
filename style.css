@@ -26,6 +26,32 @@ body
     align-items: center;
 }
 
+.searchBox::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(#fff, #fff, #e3e3e3);
+    z-index: 1;
+    filter: blur(1px);
+}
+
+.searchBox::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 10px;
+    height: 100%;
+    background: #9d9d9d;
+    z-index: 1;
+    filter: blur(1px);
+}
+
 .shadow
 {
     position: absolute;
@@ -38,6 +64,16 @@ body
     transform-origin: top;
     transform: skew(45deg);
     pointer-events: none;
+}
+
+.shadow::before
+{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #cfd1e1;
+    z-index: 1;
 }
 
 .searchBox input
